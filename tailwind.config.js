@@ -7,9 +7,14 @@ export default {
   theme: {
     extend: {
       colors:{
-        'primary':"#1F7D7D"
-      }
+        'primary':"#1F7D7D",
+        'dar':"#000000",
+        'dar2':"#414C4C",
+        'whi':"#FFFFFF",
+        'whi2':"#AAAFAF",
+      },
     },
   },
+  darkMode:'class',
   plugins: [],
 }

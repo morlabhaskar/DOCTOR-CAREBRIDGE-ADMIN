@@ -10,26 +10,26 @@ const Sidebar = () => {
     const {dToken} = useContext(DoctorContext)
 
   return (
-    <div className='min-h-screen bg-white border'>
+    <div className='min-h-[92vh] bg-white dark:bg-dar border-r border-l'>
         
         {
-            aToken && <ul className='text-[#515151] border-r'>
+            aToken && <ul className='text-[#515151]'>
 
-                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-primary' : ''}`} to={"/admin-dashboard"}>
+                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] dark:text-whi2 dark:bg-slate-700 border-r-4 border-primary' : 'dark:text-whi2'}`} to={"/admin-dashboard"}>
                     <img src={assets.home_icon} alt="" />
                     <p className='hidden md:block'>Dashboard</p>
                 </NavLink>
-                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-primary' : ''}`} to={"/all-appointments"}>
+                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] dark:text-whi2 dark:bg-slate-700 border-r-4 border-primary' : 'dark:text-whi2'}`} to={"/all-appointments"}>
                     <img src={assets.appointment_icon} alt="" />
-                    <p className='hidden md:block'>Appointments</p>
+                    <p className='hidden md:block dark:text-whi2'>Appointments</p>
                 </NavLink>
-                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-primary' : ''}`} to={"/add-doctor"}>
+                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] dark:text-whi2 dark:bg-slate-700 border-r-4 border-primary' : 'dark:text-whi2'}`} to={"/add-doctor"}>
                     <img src={assets.add_icon} alt="" />
-                    <p className='hidden md:block'>Add Doctor</p>
+                    <p className='hidden md:block dark:text-whi2'>Add Doctor</p>
                 </NavLink>
-                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-primary' : ''}`} to={"/doctors-list"}>
+                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] dark:text-whi2 dark:bg-slate-700 border-r-4 border-primary' : 'dark:text-whi2'}`} to={"/doctors-list"}>
                     <img src={assets.people_icon} alt="" />
-                    <p className='hidden md:block'>Doctors List</p>
+                    <p className='hidden md:block dark:text-whi2'>Doctors List</p>
                 </NavLink>
 
             </ul>
@@ -37,17 +37,17 @@ const Sidebar = () => {
         {
             dToken && <ul className='text-[#515151] border-r'>
 
-                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-primary' : ''}`} to={"/doctor-dashboard"}>
+                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] dark:text-whi2 dark:bg-slate-700 border-r-4 border-primary' : 'dark:text-whi2'}`} to={"/doctor-dashboard"}>
                     <img src={assets.home_icon} alt="" />
-                    <p className='hidden md:block'>Dashboard</p>
+                    <p className='hidden md:block dark:text-whi2'>Dashboard</p>
                 </NavLink>
-                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-primary' : ''}`} to={"/doctor-appointments"}>
+                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] dark:text-whi2 dark:bg-slate-700 border-r-4 border-primary' : 'dark:text-whi2'}`} to={"/doctor-appointments"}>
                     <img src={assets.appointment_icon} alt="" />
-                    <p className='hidden md:block'>Appointments</p>
+                    <p className='hidden md:block dark:text-whi2'>Appointments</p>
                 </NavLink>
-                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-primary' : ''}`} to={"/doctor-profile"}>
+                <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-56 cursor-pointer ${isActive ? 'bg-[#F2F3FF] dark:text-whi2 dark:bg-slate-700 border-r-4 border-primary' : 'dark:text-whi2'}`} to={"/doctor-profile"}>
                     <img src={assets.add_icon} alt="" />
-                    <p className='hidden md:block'>Profile</p>
+                    <p className='hidden md:block dark:text-whi2'>Profile</p>
                 </NavLink>
 
             </ul>
