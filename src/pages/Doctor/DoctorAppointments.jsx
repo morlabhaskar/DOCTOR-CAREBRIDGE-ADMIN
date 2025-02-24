@@ -27,7 +27,7 @@ const DoctorAppointments = () => {
         docappLoad
         ? ( <div>Loading...</div>)
         : appointments.length > 0 ?
-        (<div className='bg-white border rounded text-sm max-h-[80vh] min-h-[50vh] overflow-y-scroll'>
+        (<div className='bg-white dark:bg-dar border rounded text-sm max-h-[80vh] overflow-y-scroll'>
         <div className='max-sm:hidden grid grid-cols-[0.5fr_2fr_1.5fr_1.5fr_1fr_2.5fr_1fr_1fr] gap-1 py-3 px-6 border-b bg-primary text-white'>
           <p>#</p>
           <p>Patient</p>
@@ -42,7 +42,7 @@ const DoctorAppointments = () => {
         {
           appointments.map((item, index) => {
             return (
-              <div className='flex flex-wrap justify-between max-sm:text-base sm:grid grid-cols-[0.5fr_2fr_1.5fr_1.5fr_1fr_2.5fr_1fr_1fr] gap-1 items-center text-gray-500 py-3 px-6 border-b hover:bg-gray-50' key={index}>
+              <div className='flex flex-wrap justify-between max-sm:text-base sm:grid grid-cols-[0.5fr_2fr_1.5fr_1.5fr_1fr_2.5fr_1fr_1fr] gap-1 items-center text-gray-500 dark:text-whi2 py-3 px-6 border-b hover:bg-gray-50 dark:hover:bg-dar2' key={index}>
                 <p className='max-sm:hidden'>{index + 1}</p>
                 <div className='flex items-center gap-2'>
                   <img className='w-8 rounded-full' src={item.userData.image} alt="" />

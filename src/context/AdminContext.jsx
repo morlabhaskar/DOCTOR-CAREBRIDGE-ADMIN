@@ -17,6 +17,9 @@ const AdminContextProvider = (props) => {
 
     const getAllDoctors = async () => {
         try {
+            if (!aToken) {
+                console.log("\u274C Missing Admin Token!");
+            }
             const {data} = await axios.post(backendUrl + '/api/admin/all-doctors',{},{headers:{aToken}})
             if(data.success){
                 setDoctors(data.doctors)
@@ -80,7 +83,11 @@ const AdminContextProvider = (props) => {
     const deleteDoctor = async (docId) => {
         try {
             
-            const {data} = await axios.delete(backendUrl + '/api/admin/delete-doctor',{docId},{headers:{aToken}})
+            // const {data} = await axios.delete(backendUrl + '/api/admin/delete-doctor',{docId},{headers:{aToken}})
+            const { data } = await axios.delete(backendUrl + '/api/admin/delete-doctor', {
+                headers: { aToken }, 
+                data: { docId } // ✅ Correct way to send a body in DELETE request
+            });
             if (data.success) {
                 toast.success(data.message)
                 getAllDoctors()
