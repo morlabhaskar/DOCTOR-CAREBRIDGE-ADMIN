@@ -10,7 +10,7 @@ const Sidebar = () => {
     const {dToken} = useContext(DoctorContext)
 
   return (
-    <div className='min-h-[92vh] bg-white dark:bg-dar border-r border-l'>
+    <div className='min-h-[92vh] bg-white dark:bg-dar border-r border-l '>
         
         {
             aToken && <ul className='text-[#515151]'>

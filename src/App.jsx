@@ -25,7 +25,8 @@ const App = () => {
       <div className='bg-whi dark:bg-dar sm:mx-[5%]'>
         <ToastContainer />
         <Navbar />
-        <div className='flex items-start'>
+        {/* <div className='flex items-start bg-red-100'> */}
+        <div className='flex '>
           <Sidebar />
           <Routes>
 
