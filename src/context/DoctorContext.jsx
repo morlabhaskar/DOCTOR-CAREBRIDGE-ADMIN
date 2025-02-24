@@ -14,6 +14,7 @@ const DoctorContextProvider = (props) => {
     const [dashData,setDashData] = useState(false)
     const [profileData,setProfileData] = useState(false)
     const [docappLoad,setDocappLoad] = useState(true)
+    const [doctors,setDoctors] = useState([])
 
     const getAppointments = async () => {
         if (!dToken) {
@@ -108,6 +109,25 @@ const DoctorContextProvider = (props) => {
         }
     }
 
+    const getAllDoctors = async () => {
+        try {
+            if (!dToken) {
+                console.log("\u274C Missing Admin Token!");
+            }
+            const {data} = await axios.post(backendUrl + '/api/doctor/all-doctors',{},{headers:{dToken}})
+            if(data.success){
+                setDoctors(data.doctors)
+                console.log(data.doctors)
+            }
+            else{
+                toast.error(data.message)
+            }
+        } catch (error) {
+            toast.error(error.message)
+            
+        }
+    }
+
 
     const value = {
         dToken,
@@ -124,7 +144,9 @@ const DoctorContextProvider = (props) => {
         getProfileData,
         profileData,
         setProfileData,
-        docappLoad
+        docappLoad,
+        doctors,
+        getAllDoctors
 
     }
     return (
