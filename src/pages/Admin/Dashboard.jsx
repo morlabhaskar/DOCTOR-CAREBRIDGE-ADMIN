@@ -57,7 +57,7 @@ const Dashboard = () => {
 
           {dashData.latestAppointments.map((item, index) => (
             <div className='flex items-center px-6 py-3 gap-3 hover:bg-gray-100 dark:hover:bg-dar2' key={index}>
-              <img className='rounded-full w-10 dark:border-[1px]' src={item.docData.image} alt="" />
+              <img className='w-9 h-9 object-contain border border-slate-300 rounded-full' src={item.docData.image} alt="" />
               <div className='flex-1 text-sm'>
                 <p className='text-gray-800 font-medium dark:text-whi'>{item.docData.name}</p>
                 <p className='text-gray-600 dark:text-whi2'>{slotDateFormat(item.slotDate)}</p>
@@ -65,6 +65,8 @@ const Dashboard = () => {
               {
                 item.cancelled 
                 ? <p className='text-red-400 text-xs font-medium'>Cancelled</p>
+                : item.isCompleted
+                ?<p className='text-green-500 text-xs font-medium'>Completed</p>
                 :<p className='bg-red-50 cursor-pointer p-2 rounded-full w-[38px] border-red-300 border' onClick={() => cancelAppointment(item._id)}><RxCross1 className='text-red-700 text-xl' /></p>
               }
             </div>

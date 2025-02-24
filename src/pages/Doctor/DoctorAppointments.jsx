@@ -45,7 +45,7 @@ const DoctorAppointments = () => {
               <div className='flex flex-wrap justify-between max-sm:text-base sm:grid grid-cols-[0.5fr_2fr_1.5fr_1.5fr_1fr_2.5fr_1fr_1fr] gap-1 items-center text-gray-500 dark:text-whi2 py-3 px-6 border-b hover:bg-gray-50 dark:hover:bg-dar2' key={index}>
                 <p className='max-sm:hidden'>{index + 1}</p>
                 <div className='flex items-center gap-2'>
-                  <img className='w-8 rounded-full' src={item.userData.image} alt="" />
+                  <img className='w-9 h-9 object-contain border border-slate-300 rounded-full' src={item.userData.image} alt="" />
                   <p>{item.userData.name}</p>
                 </div>
                 <p className='text-xs'>{item.userData.gender}</p>
