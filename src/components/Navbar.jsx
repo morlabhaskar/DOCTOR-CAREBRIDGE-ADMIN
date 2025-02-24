@@ -58,7 +58,7 @@ const Navbar = () => {
       <div className='flex items-center gap-2 text-sm'>
         {/* <img className='w-36 sm:w-40 cursor-pointer' src={assets.logo} alt="" /> */}
         <a href="#" className="flex items-center mr-2">
-          <img className="h-8 me-3 mt-1 border-[2px] border-teal-600 rounded-b-full" src={assets.logo} alt="" />
+          <img className="h-8 me-3 mt-1 border-[2px] border-teal-600 rounded-b-full" src={assets.logo} alt=""/>
           <span className="self-center text-2xl font-semibold whitespace-nowrap bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">CareBridge</span>
         </a>
         <p className='border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-600 dark:text-whi2 dark:border-whi2'>{aToken ? 'Admin' : 'Doctor'}</p>
@@ -68,8 +68,12 @@ const Navbar = () => {
           dToken
             ?
             <div className='flex items-center gap-2 cursor-pointer group relative'>
-              {profileData?<img className='w-10 border border-slate-500 object-contain rounded-full' src={profileData.image} alt="" />:"P"}
-              <IoChevronDownOutline className='dark:text-whi' />
+              {
+                profileData
+                ?<img className='w-10 h-10 border border-slate-500 object-contain rounded-full' src={profileData.image} alt="" />
+                :<img className='w-10 border border-slate-400 rounded-full' src={assets.upload_area} alt="" />
+              }
+              <IoChevronDownOutline className='dark:text-whi'/>
               <div className='absolute top-2 -left-24 pt-14 text-base font-medium text-grey-600 z-20 hidden group-hover:block '>
                 <div className='bg-gray-100 min-w-44 rounded flex flex-col gap-4 p-4'>
                   <p className='flex gap-2'>

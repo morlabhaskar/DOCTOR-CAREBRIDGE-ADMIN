@@ -40,14 +40,16 @@ const AllAppointments = () => {
             <p className='max-sm:hidden'>{calculateAge(item.userData.dob)}</p>
             <p>{slotDateFormat(item.slotDate)}, {item.slotTime}</p>
             <div className='flex items-center gap-2'>
-              <img className='w-8 rounded-full bg-gray-200' src={item.docData.image} alt="" />
+              <img className='w-8 h-8 object-contain border border-slate-300 rounded-full' src={item.docData.image} alt="" />
               <p>{item.docData.name}</p>
             </div>
             <p>{currency} {item.docData.fees}</p>
             {
-              item.cancelled ? <p className='text-red-400 text-xs font-medium'>Cancelled</p>
-              :
-              <p className='bg-red-50 cursor-pointer p-2 rounded-full w-[38px] border-red-300 border' onClick={()=>cancelAppointment(item._id)}><RxCross1  className='text-red-700 text-xl' /></p>
+              item.cancelled 
+              ? <p className='text-red-400 text-xs font-medium'>Cancelled</p>
+              : item.isCompleted 
+              ? <p className='text-green-500 text-xs font-medium'>Completed</p>
+              :<p className='bg-red-50 cursor-pointer p-2 rounded-full w-[38px] border-red-300 border' onClick={()=>cancelAppointment(item._id)}><RxCross1  className='text-red-700 text-xl' /></p>
             }
             
           </div>
