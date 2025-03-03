@@ -14,13 +14,6 @@ const Navbar = () => {
 
   const navigate = useNavigate()
 
-  // const logout = () => {
-
-  //   setAToken("")
-  //   localStorage.removeItem('aToken')
-  //   navigate('/')
-  // }
-
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem('darkMode') === 'true'
   })

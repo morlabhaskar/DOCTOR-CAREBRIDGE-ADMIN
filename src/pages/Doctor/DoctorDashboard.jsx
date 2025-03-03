@@ -56,7 +56,7 @@ const DoctorDashboard = () => {
   return dashData && (
     <div className='m-5 flex flex-col-reverse md:flex md:flex-row w-full'>
       <div className='md:w-2/3'>
-        <div className='flex flex-wrap gap-3 items-center justify-center '>
+        {/* <div className='flex flex-wrap gap-3 items-center justify-center '>
 
           <div className='flex items-center gap-2 bg-white dark:bg-dar dark:border-[1px] p-4 min-w-72 rounded border-2 border-gray-100 cursor-pointer hover:scale-105 transition-all'>
             <img className='w-14' src={assets.appointments_icon} alt="" />
@@ -74,11 +74,11 @@ const DoctorDashboard = () => {
             </div>
           </div>
 
-        </div>
+        </div> */}
 
         <div className='bg-white dark:bg-dar '>
 
-          <div className='flex dark:text-whi dark:bg-dar2 items-center gap-2.5 px-4 py-4 mt-10 rounded-t border bg-slate-200'>
+          <div className='flex dark:text-whi dark:bg-dar2 items-center gap-2.5 px-4 py-4 mt-5 rounded-t border bg-slate-200'>
             <img src={assets.list_icon} alt="" />
             <p className='font-semibold'>Latest Bookings</p>
           </div>
